@@ -6,6 +6,10 @@ typedef struct mutex
 
   // For debugging:
   int pid; // Process holding lock
+
+  // Array of waiting threads:
+  struct proc* waiters[16];
+  int num_waiters;
 } mutex;
 
 void macquire(mutex *m);

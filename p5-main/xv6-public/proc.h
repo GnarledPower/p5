@@ -71,6 +71,7 @@ struct proc
   int nice;                   // Nice value of the process
   int lockNice;               // Nice value of the lock the process is holding
   int niceChanged;            // If the lock nice value of the process has been changed
+  int oldNice;                // save the old nice value
 };
 typedef struct
 {
